@@ -20,9 +20,6 @@ footer{
     border-left: 3px solid lightcoral;
     border-top: 3px dotted lightcoral;
     border-radius: 60px 0 0 0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
 }
 /***Nav**/
 nav ul{
