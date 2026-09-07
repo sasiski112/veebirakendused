@@ -1,0 +1,87 @@
+/*kommentaar*/
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: lightcoral; /*teksti värv*/
+    background: transparent; /*tausta värv*/
+}
+header{
+    padding: 5%;
+    border-left: 3px solid lightcoral;
+    border-bottom: 3px dotted lightcoral;
+    border-radius: 0 0 0 60px;
+    background-image: url('pilt.png');
+    background-position: center center;
+}
+footer{
+    padding: 5%;
+    background-image: url('pilt.png');
+    background-position: center center;
+    border-left: 3px solid lightcoral;
+    border-top: 3px dotted lightcoral;
+    border-radius: 60px 0 0 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+/***Nav**/
+nav ul{
+    list-style-type: none; /*täpp võtab ara*/
+    margin: 0;
+    padding: 0;
+    background-color: indianred;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+nav ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    border-left: 2px solid lightcoral;
+    border-right: 2px solid lightcoral;
+    border-radius: 20%;
+}
+nav{
+    padding: 10px;
+    margin: 10px;
+}
+
+
+main{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section#kast1{
+    padding: 5%;
+    border: 1px solid lightcoral;
+    box-sizing: border-box;
+    width: 300px;
+    border-radius: 60px;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+section#osa2{
+    padding: 5px;
+    border: 1px solid green;
+    box-sizing: border-box;
+    width: 250px;
+}
+
+img{
+    width: 250px;
+    height: auto;
+    border-radius: 200px;
+    border: 5px solid lightcoral;
+}
