@@ -14,11 +14,13 @@ header{
     border-bottom: 3px dotted lightcoral;
     border-radius: 0 0 0 60px;
     background-image: url('pilt.png');
+    background-repeat: no-repeat;
     background-position: center center;
 }
 footer{
     padding: 5%;
     background-image: url('pilt.png');
+    background-repeat: no-repeat;
     background-position: center center;
     border-left: 3px solid lightcoral;
     border-top: 3px dotted lightcoral;
