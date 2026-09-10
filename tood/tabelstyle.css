@@ -1,9 +1,30 @@
-table{
+table#lt{
     border: 2px solid black;
-    width: 30%;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     text-align: center;
 }
 td{
     border: 2px solid black;
+}
+table#ct{
+    border: 2px solid black;
+    width: 250px;
+    height: 180px;
+    text-align: center;
+    border-collapse: collapse;
+}
+table#rt{
+    border: 2px solid black;
+    width: 180px;
+    height: 250px;
+    text-align: center;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+table#rt td{
+    vertical-align: top;
+}
+.nimia{
+    background-color: darkred;
 }

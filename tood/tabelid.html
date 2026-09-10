@@ -8,13 +8,33 @@
 <body>
 <h1>Tabelid</h1>
 <h2>Lihtne tabel</h2>
-<table>
+<table id = "lt">
 <tr>
-  <td>A</td>
+  <td class="nimia">A</td>
   <td>B</td>
 </tr>
   <tr>
     <td>C</td>
+    <td>D</td>
+  </tr>
+</table>
+<h2>Tabel kus on ühendatud horisontaalne lahtrid</h2>
+<table id = "ct">
+  <tr>
+    <td colspan="2" class="nimia">A</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>C</td>
+  </tr>
+</table>
+<h3>Tabel kus on ühendatud vertikaalne lahtid</h3>
+<table id = "rt">
+  <tr>
+    <td rowspan="2" class="nimia">A</td>
+    <td>B</td>
+  </tr>
+  <tr>
     <td>D</td>
   </tr>
 </table>
