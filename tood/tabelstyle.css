@@ -25,6 +25,12 @@ table#rt{
 table#rt td{
     vertical-align: top;
 }
+table#biba{
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+
 .nimia{
     background-color: darkred;
 }
