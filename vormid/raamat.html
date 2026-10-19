@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>JS: objektid ja meetodid</title>
+    <script src="../js/raamat.js"></script>
+</head>
+<body>
+
+<h1>1. Raamatu funktsioonid</h1>
+<input type="button" value="Kuva kirjeldus" onclick="kuvaKirjeldus()">
+<div id="vastus1"></div>
+
+<input type="button" value="Muuda aastat" onclick="muudaAastat()">
+<div id="vastus2"></div>
+
+<h2>2. Raamatukogu funktsioonid</h2>
+<input type="button" value="Kuva kõik raamatud" onclick="kuvaKaik()">
+<div id="vastus3"></div>
+
+<input type="button" value="Lisa uus raamat" onclick="lisaRaamat()">
+<div id="vastus4"></div>
+
+<input type="button" value="Raamatute koguarv" onclick="naytaKokku()">
+<div id="vastus5"></div>
+
+<input type="button" value="Raamatud alates 2000" onclick="alates2000()">
+<div id="vastus6"></div>
+
+<h3>3. Otsing autori järgi</h3>
+<input type="text" id="autoriSisend" placeholder="Sisesta autori nimi">
+<input type="button" value="Otsi" onclick="otsiAutori()">
+<div id="vastus7"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

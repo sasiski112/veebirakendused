@@ -1,0 +1,236 @@
+/* Import премиального шрифта для заголовков */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+:root {
+    --gucci-black: #0d0d0d;
+    --gucci-gold: #c5a059;
+    --gucci-gold-hover: #e5c178;
+    --gucci-cream: #faf8f5;
+    --gucci-card-bg: #141414;
+    --gucci-green: #004225;
+    --gucci-red: #8b0000;
+    --gucci-border: rgba(197, 160, 89, 0.3);
+}
+
+body {
+    background-color: var(--gucci-black);
+    color: var(--gucci-cream);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- H1 Header Title --- */
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--gucci-gold);
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Header Section --- */
+header {
+    padding: 40px 5%;
+    background-color: #000000;
+    border-bottom: 1px solid var(--gucci-gold);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gucci-green) 0%, var(--gucci-green) 40%, var(--gucci-red) 40%, var(--gucci-red) 60%, var(--gucci-green) 60%, var(--gucci-green) 100%);
+}
+
+/* --- Navigation --- */
+nav {
+    padding: 0;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--gucci-cream);
+    text-decoration: none;
+    padding: 12px 24px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid var(--gucci-border);
+    background-color: var(--gucci-card-bg);
+    border-radius: 0; /* Строгий luxury стиль без закруглений */
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover {
+    color: var(--gucci-black);
+    background-color: var(--gucci-gold);
+    border-color: var(--gucci-gold);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- Main Layout --- */
+main {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* --- Sections / Cards --- */
+section#kast1, section#osa2, section {
+    background-color: var(--gucci-card-bg);
+    border: 1px solid var(--gucci-border);
+    padding: 30px;
+    box-sizing: border-box;
+    width: 320px;
+    border-radius: 0;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+section#kast1:hover, section#osa2:hover, section:hover {
+    border-color: var(--gucci-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+/* --- Images --- */
+img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 0; /* Четкий прямоугольный фэшн-формат */
+    border: 1px solid var(--gucci-gold);
+    padding: 5px;
+    background-color: var(--gucci-black);
+    filter: grayscale(20%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 60px;
+    padding: 40px 5%;
+    background-color: #000000;
+    border-top: 1px solid var(--gucci-gold);
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--gucci-gold);
+    position: relative;
+}
+
+/* --- Links inside content --- */
+a {
+    color: var(--gucci-gold);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--gucci-gold-hover);
+}
+/* --- Сетка для галереи картинок --- */
+section#pildigalerii {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+section#pildigalerii img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover; /* Сохраняет пропорции без искажений */
+    border: 1px solid var(--gucci-border, #c5a059);
+    transition: all 0.4s ease;
+}
+
+section#pildigalerii img:hover {
+    border-color: var(--gucci-gold, #c5a059);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.25);
+}
+
+/* --- Секция видео --- */
+section#Video {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+section#Video video {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--gucci-border, #c5a059);
+    outline: none;
+}
+
+/* --- Секция Spotify --- */
+section#Muusika {
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    background-color: var(--gucci-card-bg, #141414);
+    border: 1px solid var(--gucci-border, #c5a059);
+}
+
+/* --- Секция Карты (Google Maps) --- */
+section#Kaart {
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--gucci-border, #c5a059);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    display: block;
+}

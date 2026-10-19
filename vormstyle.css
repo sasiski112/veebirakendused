@@ -1,0 +1,50 @@
+form{
+    text-align: left;
+    border-radius: 30px;
+}
+table, td{
+    border-collapse: collapse;
+    width:45%;
+    padding: 1%;
+    background-color: lightseagreen;
+}
+input[type=text]{
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 1%;
+}
+label{
+    font-weight: bold;
+}
+input[type=radio]:hover{
+    font-size: 1pt;
+    background-color: black;
+    width: 20px;
+}
+input[type=radio]+ label{
+    background-color: lightseagreen;
+    font-size: 11pt;
+    padding: 2px;
+    width: 60px;
+    height: 20px;
+    cursor: pointer;
+    line-height: 20px;
+}
+.button {
+    display: inline-block;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: lightgrey;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    text-align: center;
+    background-color: blue;
+    width: 45pt;
+    height: 15pt;
+}
