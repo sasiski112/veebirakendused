@@ -25,12 +25,32 @@ table#rt{
 table#rt td{
     vertical-align: top;
 }
-table#biba{
+table#biba {
     border: 2px solid black;
     width: 250px;
     height: 250px;
     text-align: center;
-
+}
 .nimia{
     background-color: darkred;
 }
+    #ff {
+        border-collapse: collapse;
+        width: 400px;          /* общая ширина таблицы */
+        height: 300px;         /* общая высота таблицы */
+        table-layout: fixed;   /* колонки будут одинаковой ширины */
+    }
+
+    #ff td {
+        border: 2px solid #333;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 24px;
+    }
+#ff tr:nth-child(1) td:nth-child(1) { background: #ef4444; }
+#ff tr:nth-child(1) td:nth-child(2) { background: #f97316; }
+#ff tr:nth-child(1) td:nth-child(3) { background: #eab308; }
+#ff tr:nth-child(2) td:nth-child(1) { background: #22c55e; }
+#ff tr:nth-child(2) td:nth-child(2) { background: #3b82f6; }
+#ff tr:nth-child(3) td:nth-child(1) { background: #8b5cf6; }
+#ff tr:nth-child(3) td:nth-child(2) { background: #ec4899; }
