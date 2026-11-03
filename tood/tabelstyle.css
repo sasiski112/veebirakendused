@@ -54,3 +54,34 @@ table#biba {
 #ff tr:nth-child(2) td:nth-child(2) { background: #3b82f6; }
 #ff tr:nth-child(3) td:nth-child(1) { background: #8b5cf6; }
 #ff tr:nth-child(3) td:nth-child(2) { background: #ec4899; }
+
+
+#fist {
+    border-collapse: collapse;
+    width: 400px;          /* общая ширина таблицы */
+    height: 300px;         /* общая высота таблицы */
+    table-layout: fixed;   /* колонки будут одинаковой ширины */
+}
+
+#fist tr:nth-child(1) td:nth-child(1) { background: #eab308; }
+#fist tr:nth-child(1) td:nth-child(1) { background: #eab308; }
+
+#test {
+    border-collapse: collapse;
+    width: 400px;
+    height: 300px;
+    table-layout: fixed;
+    text-align: center;
+}
+#test tr:nth-child(1) td:nth-child(1) { background: lightcoral; }
+#test tr:nth-child(1) td:nth-child(2) { background: lightblue; }
+#test tr:nth-child(1) td:nth-child(3) { background: mistyrose; }
+#test tr:nth-child(1) td:nth-child(4) { background: moccasin; }
+#test tr:nth-child(2) td:nth-child(1) { background: indianred; }
+#test tr:nth-child(3) td:nth-child(1) { background: mediumvioletred; }
+#test tr:nth-child(3) td:nth-child(2) { background: lightpink; }
+#test tr:nth-child(3) td:nth-child(3) { background: deeppink; }
+#test tr:nth-child(4) td:nth-child(1) { background: darkorange; }
+#test tr:nth-child(4) td:nth-child(2) { background: gainsboro; }
+#test tr:nth-child(4) td:nth-child(3) { background: lightblue; }
+#test tr:nth-child(5) td:nth-child(1) { background: lightyellow ; }
