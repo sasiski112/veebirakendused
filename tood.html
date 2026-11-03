@@ -2,52 +2,54 @@
 <html lang="et">
 <head>
   <meta charset="UTF-8">
-  <title>JS Testimine</title>
+  <title>Matvii veebirakenduste aluste tööd</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Kuupäevad ja Aeg (kuupaev.js)</h1>
+<header>
+  <h1>Matvii veebirakenduste aluste tööd</h1>
+</header>
 
-<button onclick="tana()">Tänane kuupäev</button>
-<p id="vastus"></p>
+<nav>
+  <ul>
+    <li><a href="index.html">Avaleht</a></li>
+    <li><a href="tutvustus.html">Tutvustus</a></li>
+    <li><a href="lingid.html">Lingid</a></li>
+    <li><a href="tood.html">Tehtud tööd</a></li>
+    <li><a href="meedia.html">Meedia</a></li>
+  </ul>
+</nav>
 
-<button onclick="praegu()">Praegune kellaaeg</button>
-<p id="vast"></p>
+<main>
+  <section id="kast5">
+    <h2>Tehtud tööde lingid</h2>
+    <p>
+      <a href="kujundus2/index.html">Kujundus</a>
+      <br>
+      <a href = "tood/tabelid.html">Tabellid</a>
+      <br>
+      <a href = "kysimuslik.html">Küsimuslik</a>
+      <br>
+      <a href = "maparea/pealeht.html">Maparea</a>
+      <br>
+      <a href = "tood/tabeliLoomine.html">Tabeli test</a>
+      <br>
+      <a href = "tood/kysimJS.html">Js</a>
+    </p>
+  </section>
 
-<button onclick="konnad()">Konsultatsiooni nädalani</button>
-<p id="vastus_konsultatsioon"></p>
+  <section id="kast6">
+    <h2>Päevapilt</h2>
+    <div>Ise tehtud pilt
+      <img src="pilt.png" alt="see on kollane päike">
+    </div>
+  </section>
+</main>
 
-<button onclick="sunnipa()">Sünnipäevani jäänud</button>
-<p id="vastus3"></p>
+<footer>
+  <div>Matvii leht &copy; 2026</div>
+</footer>
 
-<hr>
-
-<h1>Raamatukogu (raamat.js)</h1>
-
-<button onclick="kuvaKirjeldus()">Põhi-raamatu kirjeldus</button>
-<p id="vastus1"></p>
-
-<button onclick="muudaAastat()">Muuda raamatu aastat (+2)</button>
-<p id="vastus2"></p>
-
-<button onclick="kuvaKaik()">Kuva kõik raamatud</button>
-<p id="vastus_kaik"></p>
-
-<button onclick="lisaRaamat()">Lisa uus raamat</button>
-<p id="vastus4"></p>
-
-<button onclick="naytaKokku()">Raamatute koguarv</button>
-<p id="vastus5"></p>
-
-<button onclick="alates2000()">Raamatud alates 2000</button>
-<p id="vastus6"></p>
-
-<input type="text" id="autoriSisend" placeholder="Autori nimi...">
-<button onclick="otsiAutori()">Otsi</button>
-<p id="vastus7"></p>
-
-<!-- Подключение скриптов из папки js -->
-<script src="../js/kuupaev.js"></script>
-<script src="../js/raamat.js"></script>
 </body>
 </html>
