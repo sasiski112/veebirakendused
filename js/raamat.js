@@ -70,7 +70,7 @@ let raamatukogu = {
 };
 
 function kuvaKaik() {
-    document.getElementById("vastus3").innerHTML = raamatukogu.kuvaKaik();
+    document.getElementById("vastus_kaik").innerHTML = raamatukogu.kuvaKaik();
 }
 
 function lisaRaamat() {

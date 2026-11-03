@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Testimine</title>
+  <link rel="stylesheet" href="tabelstyle.css">
+</head>
+<body>
+
+<section>
+  <h1>Kuupäevad ja Aeg</h1>
+
+  <button onclick="tana()">Tänane kuupäev</button>
+  <p id="vastus"></p>
+
+  <button onclick="praegu()">Praegune kellaaeg</button>
+  <p id="vast"></p>
+
+  <button onclick="konnad()">Konsultatsiooni nädalani</button>
+  <p id="vastus_kons"></p>
+
+  <button onclick="sunnipa()">Sünnipäevani jäänud</button>
+  <p id="vastus3"></p>
+</section>
+
+<section>
+  <h1>Raamatukogu</h1>
+
+  <button onclick="kuvaKirjeldus()">Põhi-raamatu kirjeldus</button>
+  <p id="vastus1"></p>
+
+  <button onclick="muudaAastat()">Muuda raamatu aastat (+2)</button>
+  <p id="vastus2"></p>
+
+  <button onclick="kuvaKaik()">Kuva kõik raamatud</button>
+  <p id="vastus_kaik"></p>
+
+  <button onclick="lisaRaamat()">Lisa uus raamat</button>
+  <p id="vastus4"></p>
+
+  <button onclick="naytaKokku()">Raamatute koguarv</button>
+  <p id="vastus5"></p>
+
+  <button onclick="alates2000()">Raamatud alates 2000</button>
+  <p id="vastus6"></p>
+
+  <input type="text" id="autoriSisend" placeholder="Autori nimi...">
+  <button onclick="otsiAutori()">Otsi</button>
+  <p id="vastus7"></p>
+</section>
+
+<script src="../js/kuupaev.js"></script>
+<script src="../js/raamat.js"></script>
+</body>
+</html>
