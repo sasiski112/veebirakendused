@@ -6,11 +6,6 @@ let raamat = {
     kirjeldus() {
         return "Raamat on " + this.pealkiri + ", autor on " + this.autor + ", aasta on " + this.aasta;
     },
-
-    muudaAastat(uus) {
-        this.aasta = uus;
-        return "Uus aasta on nüüd: " + this.aasta;
-    }
 };
 
 function kuvaKirjeldus() {
@@ -24,9 +19,27 @@ function muudaAastat() {
 
 let raamatukogu = {
     raamatud: [
+        // George Orwell
         { pealkiri: "1984", autor: "George Orwell", aasta: 1949 },
+        { pealkiri: "Loomade farm", autor: "George Orwell", aasta: 1945 },
+        { pealkiri: "Birma päevad", autor: "George Orwell", aasta: 1934 },
+        { pealkiri: "Hüvasti, Aspidistra", autor: "George Orwell", aasta: 1936 },
+
+        // Jevgeni Zamjatin
         { pealkiri: "Meie", autor: "Jevgeni Zamjatin", aasta: 1924 },
-        { pealkiri: "Kotlovan", autor: "Andrei Platonov", aasta: 1930 }
+        { pealkiri: "Saarlased", autor: "Jevgeni Zamjatin", aasta: 1918 },
+        { pealkiri: "Koobas", autor: "Jevgeni Zamjatin", aasta: 1920 },
+        { pealkiri: "Jumala piits", autor: "Jevgeni Zamjatin", aasta: 1917 },
+
+        // Andrei Platonov
+        { pealkiri: "Kotlovan", autor: "Andrei Platonov", aasta: 1930 },
+        { pealkiri: "Tševengur", autor: "Andrei Platonov", aasta: 1929 },
+        { pealkiri: "Noor meri", autor: "Andrei Platonov", aasta: 1934 },
+        { pealkiri: "Džan", autor: "Andrei Platonov", aasta: 1935 },
+
+        // Pärast 2000. aastat
+        { pealkiri: "Puhastus", autor: "Sofi Oksanen", aasta: 2008 },
+        { pealkiri: "Mees, kes teadis ussisõnu", autor: "Andrus Kivirähk", aasta: 2007 }
     ],
 
     kuvaKaik() {

@@ -26,14 +26,19 @@ function praegu(){
     vast.innerHTML = "Praegu on " + tund + ":" + munutid + ":" + secundid;
 }
 
-const konsultatsioon = new Date(2026, 10, 2);
-const vahe = konsultatsioon.getTime() - now.getTime();
-const konspaev = vahe/(1000*60*60*24);
 
 function konnad() {
+    const now = new Date();
+    const konsultatsioon = new Date(2026, 10, 2); // 2. november
+    const paevi = Math.ceil((konsultatsioon - now) / (1000 * 60 * 60 * 24));
     let vastus2 = document.getElementById("vastus_kons");
-    console.log("Konsultatsiooni nädalani " + konspaev.toFixed(0) + "päeva");
-    vastus2.innerHTML = "Konsultatsiooni nädalani " + konspaev.toFixed(0) + "päeva";
+
+    if (paevi > 0) {
+        vastus2.innerHTML = "Konsultatsiooni nädalani " + paevi + " päeva";
+    } else {
+        vastus2.innerHTML = "Konsultatsioonipäev on möödas";
+        console.log("Konsultatsioonipäev on möödas");
+    }
 }
 
 const sunnipaev = new Date(aasta + 1, 4, 1);
