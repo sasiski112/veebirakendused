@@ -4,18 +4,13 @@ let raamat = {
     aasta: 1912,
 
     kirjeldus() {
-        return "Raamat on " + this.pealkiri + ", autor on " + this.autor + ", aasta on " + this.aasta;
+        return `${this.pealkiri}, autor ${this.autor}, välja antud aastal ${this.aasta}.`;
     },
+
+    muudaAastat(uusAasta) {
+        this.aasta = uusAasta;
+    }
 };
-
-function kuvaKirjeldus() {
-    document.getElementById("vastus1").innerHTML = raamat.kirjeldus();
-}
-
-function muudaAastat() {
-    raamat.aasta = raamat.aasta + 2;
-    document.getElementById("vastus2").innerHTML = "Uus aasta on: " + raamat.aasta;
-}
 
 let raamatukogu = {
     raamatud: [
@@ -42,48 +37,56 @@ let raamatukogu = {
         { pealkiri: "Mees, kes teadis ussisõnu", autor: "Andrus Kivirähk", aasta: 2007 }
     ],
 
-    kuvaKaik() {
+    kuvaRaamatud() {
         let tekst = "";
         this.raamatud.forEach(r => {
-            tekst += r.pealkiri + " (" + r.autor + ", " + r.aasta + ")<br>";
+            tekst += `Pealkiri: ${r.pealkiri}, Autor: ${r.autor}, Aasta: ${r.aasta}<br>`;
         });
         return tekst;
     },
 
-    lisaRaamatSisene(p, a, aa) {
+    lisaRaamat(p, a, aa) {
         this.raamatud.push({ pealkiri: p, autor: a, aasta: aa });
-        return "Uus raamat lisatud: " + p;
     },
 
-    naytaKokku() {
-        return "Kokku raamatuid: " + this.raamatud.length;
+    raamatuteArv() {
+        return this.raamatud.length;
     },
 
-    alates2000() {
-        let uued = this.raamatud.filter(r => r.aasta >= 2000);
-        let tekst = "Uusi raamatuid alates 2000 on " + uued.length + ":<br>";
+    pärast2000() {
+        let uued = this.raamatud.filter(r => r.aasta > 2000);
+        let tekst = `Raamatuid pärast 2000. aastat (${uued.length}):<br>`;
         uued.forEach(r => {
-            tekst += "- " + r.pealkiri + "<br>";
+            tekst += `- ${r.pealkiri} (${r.aasta})<br>`;
         });
         return tekst;
     },
 
-    otsiAutori(nimi) {
-        let res = this.raamatud.filter(r => r.autor.toLowerCase().includes(nimi.toLowerCase()));
-        if (res.length > 0) {
+    otsiAutoriJargi(autorNimi) {
+        let tulemus = this.raamatud.filter(r => r.autor.toLowerCase().includes(autorNimi.toLowerCase()));
+        if (tulemus.length > 0) {
             let tekst = "Leitud raamatud:<br>";
-            res.forEach(r => {
-                tekst += "- " + r.pealkiri + " (" + r.autor + ")<br>";
+            tulemus.forEach(r => {
+                tekst += `- ${r.pealkiri} (${r.autor}, ${r.aasta})<br>`;
             });
             return tekst;
         } else {
-            return "Ei leitud midagi autori nimega: " + nimi;
+            return `Autori nimega "${autorNimi}" raamatuid ei leitud.`;
         }
     }
 };
 
+function kuvaKirjeldus() {
+    document.getElementById("vastus1").innerHTML = raamat.kirjeldus();
+}
+
+function muudaAastat() {
+    raamat.aasta = raamat.aasta + 2;
+    document.getElementById("vastus2").innerHTML = "Uus aasta on: " + raamat.aasta;
+}
+
 function kuvaKaik() {
-    document.getElementById("vastus_kaik").innerHTML = raamatukogu.kuvaKaik();
+    document.getElementById("vastus_kaik").innerHTML = raamatukogu.kuvaRaamatud();
 }
 
 function lisaRaamat() {
@@ -92,26 +95,26 @@ function lisaRaamat() {
     let aasta = Number(prompt("Sisesta raamatu aasta:"));
 
     if (pealkiri && autor && aasta) {
-        raamatukogu.lisaRaamatSisene(pealkiri, autor, aasta);
-        document.getElementById("vastus4").innerHTML = "Uus raamat edukalt lisatud: " + pealkiri + " (" + autor + ", " + aasta + ")";
+        raamatukogu.lisaRaamat(pealkiri, autor, aasta);
+        document.getElementById("vastus4").innerHTML = `Uus raamat lisatud: ${pealkiri} (${autor}, ${aasta})`;
     } else {
-        document.getElementById("vastus4").innerHTML = "Raamatu lisamine tühistati või mõni väli jäi tühjaks!";
+        document.getElementById("vastus4").innerHTML = "Lisamine tühistati või andmed on puudulikud.";
     }
 }
 
 function naytaKokku() {
-    document.getElementById("vastus5").innerHTML = raamatukogu.naytaKokku();
+    document.getElementById("vastus5").innerHTML = "Raamatute koguarv: " + raamatukogu.raamatuteArv();
 }
 
 function alates2000() {
-    document.getElementById("vastus6").innerHTML = raamatukogu.alates2000();
+    document.getElementById("vastus6").innerHTML = raamatukogu.pärast2000();
 }
 
 function otsiAutori() {
     let nimi = document.getElementById("autoriSisend").value;
-    if (nimi !== "") {
-        document.getElementById("vastus7").innerHTML = raamatukogu.otsiAutori(nimi);
+    if (nimi.trim() !== "") {
+        document.getElementById("vastus7").innerHTML = raamatukogu.otsiAutoriJargi(nimi);
     } else {
-        document.getElementById("vastus7").innerHTML = "Sisesta enne nime otsimiseks!";
+        document.getElementById("vastus7").innerHTML = "Palun sisesta otsinguks autori nimi!";
     }
 }

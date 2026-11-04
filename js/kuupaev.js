@@ -36,8 +36,8 @@ function konnad() {
     if (paevi > 0) {
         vastus2.innerHTML = "Konsultatsiooni nädalani " + paevi + " päeva";
     } else {
-        vastus2.innerHTML = "Konsultatsioonipäev on möödas";
-        console.log("Konsultatsioonipäev on möödas");
+        vastus2.innerHTML = "Konsultatsioonipäevad on juba alanud";
+        console.log("Konsultatsioonipäevad on juba alanud");
     }
 }
 
