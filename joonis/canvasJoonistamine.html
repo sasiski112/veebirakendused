@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas joonistamine</title>
+    <link rel="stylesheet" href="canvasStyle.css">
+    <script src="canvasScript.js"></script>
+</head>
+<body>
+<h1>Joonistusrakendus Canvas +JS</h1>
+<br>
+<canvas id ="canvas" height="500" width="500"></canvas>
+<table>
+    <tr>
+        <td>
+            <input type="button" value="joon" onClick="joon()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="puhasta" onClick="puhasta()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="kolmnurk" onClick="kolmnurk()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="ristkülik" onClick="ristkulik()">
+            <label for="laius">Laius:</label>
+            <input type ="number" id="laius" min="0" max="400" step="10" onchange="ristkulik()">
+            <label for="korgus">Kõrgus:</label>
+            <input type ="number" id="korgus" min="0" max="400" step="10" onchange="ristkulik()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="ring" onClick="ring()">
+            <label for="raadius">Raadius:</label>
+            <input type ="number" id="raadius" min="0" max="50" step="2" onchange="ring()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Ratas1" onClick="rat1()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Ratas2" onClick="rat2()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Kere1" onClick="kere()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Kere2" onClick="topkere()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Tuled" onClick="tuled()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Detailid" onClick="details()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="pilt" onClick="pilt()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Auto" onClick="auto()">
+        </td>
+    </tr>
+</table>
+<br>
+<a href="../index.html">Avaleht</a>
+</body>
+</html>

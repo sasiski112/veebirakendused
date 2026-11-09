@@ -1,0 +1,10 @@
+canvas#canvas {
+    background-color: lightgreen;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+table{
+    position: absolute;
+    left: 420pt;
+    top: 264pt;
+}
