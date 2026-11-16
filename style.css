@@ -66,6 +66,7 @@ main{
 }
 
 section#kast1{
+    position: relative;
     padding: 5%;
     border: 1px solid lightcoral;
     box-sizing: border-box;
@@ -87,4 +88,17 @@ img{
     height: auto;
     border-radius: 50%;
     border: 5px solid black;
+}
+h2{
+    position: relative;
+    left: 0;
+}
+p{
+    position: relative;
+    left: 0;
+}
+h3{
+    position: relative;
+
+    left: 0;
 }

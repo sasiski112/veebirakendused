@@ -5,8 +5,41 @@
     <meta charset="UTF-8">
     <title>Matvii veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+            integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#kuva').hide();
+            //nupu peida vajutamine
+            $('#peida').click(function(){
+                $('#sisu').hide(760);
+                $(this).hide();
+                $('#kuva').show();
+            });
+            //nupu kuva vajutamine
+            $('#kuva').click(function(){
+                $('#sisu').show(760);
+                $(this).hide();
+                $('#peida').show();
+            });
+        });
+        function start(){
+            $('#sisu').draggable();
+            $('#pilt').draggable();
+            $('#sisu').bind("drag", xyCord);
+            $('#pilt').bind("drag", xyCord);
+        }
+        function xyCord(event, ui){
+            let koht=ui.offset;
+            $('#vastus').html('x: '+koht.left + '/ y: '+koht.top);
+        }
+    </script>
 </head>
-<body>
+<body onclick="start()">
 <!--veebilehe sisu-->
 <!--päis-->
 <header>
@@ -36,17 +69,30 @@
 </nav>
 <!--põhisisu-->
 <main>
+    <input type="button" value="⬅" id="vasakule" style="display: none;"
+           onclick="$('section, img, h3').animate({left: '0px'}, 600)
+$(this).hide();
+$('#paremale').show();">
+
+    <input type="button" value="➡" id="paremale"
+           onclick="$('section, img, h3').animate({left: '500px'}, 600);
+$(this).hide();
+$('#vasakule').show();">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
     <section id = "kast1">
         <h2>
             Tere tulemast
         </h2>
-        <p>See on index leht mis on tehtus 1.veebirakenduste tunnis!
+        <p id="sisu">See on index leht mis on tehtus 1.veebirakenduste tunnis!
             Palun vajuta teise lingi peale ning kontrolli et sisu
         </p>
     </section>
     <section id ="kast2">
-        <h2>Põnev pilt</h2>
-        <div><img src="pilt.png" alt=" see on minu pilt"></div>
+        <h3 id ="imag">Põnev pilt</h3>
+        <div><img id="pilt" src="pilt.png" alt=" see on minu pilt"></div>
+        <div id="vastus"></div>
     </section>
 </main>
 <!--jalus-->
