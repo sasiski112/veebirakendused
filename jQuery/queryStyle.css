@@ -17,3 +17,12 @@ h2{
     position: relative;
     left: 0;
 }
+#peitonSisu{
+    display: none
+}
+#liik{
+    position: relative;
+}
+#piltt{
+    display: none;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery guide</title>
+  <link rel="stylesheet" href="queryStyle.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+          integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+          crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $('#kuva').hide();
+
+      $('#peida').click(function(){
+        $('#sisu').hide(760);
+        $(this).hide();
+        $('#kuva').show();
+      });
+
+      $('#kuva').click(function(){
+        $('#sisu').show(760);
+        $(this).hide();
+        $('#peida').show();
+      });
+
+      $('#varv').mouseenter(function(){
+        $(this).animate({ color: 'red' }, 400);
+      });
+
+      $('#varv').mouseleave(function(){
+        $(this).animate({ color: 'black' }, 400);
+      });
+
+      $('#liik').click(function(){
+        $(this).animate({ left: '50px' }, 500);
+      });
+
+      $('#peiton').click(function(){
+        $('#peitonSisu').slideToggle(500);
+      });
+
+      $('#kuvaPiltBtn').click(function(){
+        $('#piltt').fadeToggle(500);
+      });
+
+      $('#suur').click(function(){
+        $(this).animate({ fontSize: '24px' }, 500);
+      });
+
+      start();
+    });
+
+    function start(){
+      $('#loh').draggable();
+      $('#piltt').draggable();
+    }
+  </script>
+</head>
+<body>
+<h1>
+  Siin on jQuery kasutamine selgitus
+</h1>
+<br>
+<h2>
+  See leht demonstreerib jQuery võimalusi. Klõps ja proovi järele!
+</h2>
+<button id="peida">PEIDA</button>
+<button id="kuva">NÄITA</button>
+
+<div id="sisu">
+  <div id="varv">Teksti värvi muutmine (animate, mouseenter, mouseleave)</div>
+  <div id="liik">Liikumine ekraanil (animate)</div>
+  <div id="peiton">jQuery sektsioon peitmine/näitamine (slideToggle)</div>
+  <div id="peitonSisu">Peidetav sektsioon</div>
+  <div id="kuvaPiltBtn">Pildi kuvamine ja peitmine (fadeIn, fadeOut)</div>
+  <img id="piltt" src="../pilt.png" alt="Pilt">
+  <div id="suur">Teksti suuruse muutmine (animate)</div>
+  <div id="loh">Elementide lohistamine (draggable)</div>
+</div>
+
+
+
+</body>
+</html>
