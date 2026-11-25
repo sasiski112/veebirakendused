@@ -1,0 +1,19 @@
+#ty{
+    width: 200px;
+    height: 200px;
+}
+.sqare{
+    list-style-type: square;
+}
+.circle{
+    list-style-type: disc;
+}
+.circle1{
+    list-style-type: disc;
+}
+.rim{
+    list-style-type: upper-roman;
+}
+.bykvi{
+    list-style-type: upper-alpha;
+}
